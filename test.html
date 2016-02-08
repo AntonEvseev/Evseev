@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Тест</title>
+      <title>Главная</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <header>
-         <a href= "index.html"> <img src="weblogo.png" alt="Изображение" height="100" /> </a>
-         <h1>Основы Web-технологий</h1>
-            <nav>
-         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li>
-               <a href="web.html">Web-технологии</a>
-               <ul>
-                  <li><a href="html5.html">HTML5</a></li>
-                  <li><a href="css3.html">CSS3</a></li>
-                  <li><a href="js.html">JavaScript</a></li>
-               </ul>
-            </li>
-            <li><a href="calc.html">Калькулятор</a></li>
-            <li><a href="test.html">Тест</a></li>
-         </ul>
-      </nav>
-      </header>
+      <div class="head">
+         <header>
+            <div class="img"> <a href= "index.html"> <img src="weblogo.png" alt="Изображение" height="100" /> </a></div>
+            <div class="name">
+               <h1>Основы Web-технологий</h1>
+            </div>
+            <div class="nav">
+               <nav>
+                  <ul class="menu">
+                     <li><a href="index.html">Главная</a></li>
+                     <li>
+                        <a href="web.html">Web-технологии</a>
+                        <ul class="submenu">
+                           <li><a href="html5.html">HTML5</a></li>
+                           <li><a href="css3.html">CSS3</a></li>
+                           <li><a href="js.html">JavaScript</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="calc.html">Калькулятор</a></li>
+                     <li><a href="test.html">Тест</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </header>
+      </div>
       <br />
-      <form>
-         <p>Какой тег предназначен для создания ссылок:</p>
-         <input type="radio" name="color" value="black" />&lt;a&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;a /&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;ref&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;ref /&gt;
-         <p>Какой тег предназначен для создания нумерованного списка:</p>
-         <input type="radio" name="color" value="black" />&lt;li&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;dl&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;ol&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;ul&gt;
-         <p>Какой тег предназначен для передачи служебной информации браузеру:</p>
-         <input type="radio" name="color" value="black" />&lt;info&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;info /&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;meta&gt;<br />
-         <input type="radio" name="color" value="black" />&lt;meta /&gt;
-         <p>Какие теги используются при создании таблицы:</p>
-         <input type="checkbox" name="color" value="black" />&lt;bodyt&gt;<br />
-         <input type="checkbox" name="color" value="black" />&lt;td&gt;<br />
-         <input type="checkbox" name="color" value="black" />&lt;groupcol&gt;<br />
-         <input type="checkbox" name="color" value="black" />&lt;col /&gt;
-         <p>Какие атрибуты используются при создании форм:</p>
-         <input type="checkbox" name="color" value="black" />&lt;autocomplete&gt;<br />
-         <input type="checkbox" name="color" value="black" />&lt;action&gt;<br />
-         <input type="checkbox" name="color" value="black" />&lt;charset&gt;<br />
-         <input type="checkbox" name="color" value="black" />&lt;validate&gt; <br /><br />
-         <input type="button" name="button"  value="Результат" />
-      </form>
-      <br />
-      <br />
-      <footer>
-         <address>
-            <a href="mailto:mail@mail">Пишите:anton.evseevpb@gmail.com</a>
-         </address>
-         &copy;Евсеев Антон Сергеевич,2016 год
-      </footer>
+      <div class="c2">
+         <form>
+            <p>Какой тег предназначен для создания ссылок:</p>
+            <input type="radio" name="color" value="black" />&lt;a&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;a /&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;ref&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;ref /&gt;
+            <p>Какой тег предназначен для создания нумерованного списка:</p>
+            <input type="radio" name="color" value="black" />&lt;li&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;dl&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;ol&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;ul&gt;
+            <p>Какой тег предназначен для передачи служебной информации браузеру:</p>
+            <input type="radio" name="color" value="black" />&lt;info&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;info /&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;meta&gt;<br />
+            <input type="radio" name="color" value="black" />&lt;meta /&gt;
+            <p>Какие теги используются при создании таблицы:</p>
+            <input type="checkbox" name="color" value="black" />&lt;bodyt&gt;<br />
+            <input type="checkbox" name="color" value="black" />&lt;td&gt;<br />
+            <input type="checkbox" name="color" value="black" />&lt;groupcol&gt;<br />
+            <input type="checkbox" name="color" value="black" />&lt;col /&gt;
+            <p>Какие атрибуты используются при создании форм:</p>
+            <input type="checkbox" name="color" value="black" />&lt;autocomplete&gt;<br />
+            <input type="checkbox" name="color" value="black" />&lt;action&gt;<br />
+            <input type="checkbox" name="color" value="black" />&lt;charset&gt;<br />
+            <input type="checkbox" name="color" value="black" />&lt;validate&gt; <br />
+            <input type="button" name="button"  value="Результат" id="resbutton" />
+         </form>
+      </div>
+      <div class="c3">
+         <footer>
+            <address>
+               <a href="mailto:mail@mail">Пишите:anton.evseevpb@gmail.com</a>
+            </address>
+            &copy;Евсеев Антон Сергеевич,2016 год
+         </footer>
+      </div>
    </body>
 </html>
