@@ -79,7 +79,7 @@ border-radius: 8px;
 font-family: Arial;
 padding: 5px;
 width: 800px;
-text-align: left;
+text-align: justify;
 }
 .c3 { float: left;
 background-color: white;
@@ -99,6 +99,8 @@ border-radius: 8px;
 background-color: #B8B8B8 ;
 border: 1px solid black;
 padding: 4px;
+text-align: justify;
+margin-left: 5px;
 }
 h4 {margin-top: 15px;
 margin-bottom: 15px; 
@@ -115,24 +117,31 @@ width: 800px;
 height: 184px;
 }
 table {border: 0;
-border-spacing: 4px 8px; /* Расстояние между ячейками */
+border-spacing: 2px 4px; /* Расстояние между ячейками */
 width: 280px;
 margin: 0 auto;
 }
 td {border: 0;
 width: 50px; /* Ширина кнопки */
-height: 25px; /* Высота кнопки */
+height: 27px; /* Высота кнопки */
+border: lightgray;
 }
 input[type="button"] {
 width: 100%; /* Ширина кнопки */
 height: 100%; /* Высота кнопки */
 }
 #res {
-border: 1px solid gray;
+border: 1px solid silver;
+width: 276px;
+height: 25px;
 }
 #resbutton {
 width: 80px;
 }
 ul {
 margin-left: 43px;
+}
+button[type="button"] {
+width: 100%; /* Ширина кнопки */
+height: 55px; /* Высота кнопки */
 }
