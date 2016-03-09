@@ -33,39 +33,39 @@
       </div>
       <br />
       <div class="calc">
-         <form name="frm">
-            <table border="1">
-               <tr>
-                  <td colspan="5" id="res"><input class="rescalc" name="result" type="Text"><br /></td>
-               </tr>
-               <tr>
-                  <td><button type="button" name="7" value="7" onClick="run7()">7</button></td>
-                  <td><button type="button" name="8" value="8" onClick="run8()">8</button></td>
-                  <td><button type="button" name="9" value="9" onClick="run9()">9</button></td>
-                  <td><button type="button" name="devision" value="/" onClick="rundevision()">/</button></td>
-                  <td><button type="button" name="del" value="C" onClick="rundel()">C</button></td>
-               </tr>
-               <tr>
-                  <td><button type="button" name="4" value="4" onClick="run4()">4</button></td>
-                  <td><button type="button" name="5" value="5" onClick="run5()">5</button></td>
-                  <td><button type="button" name="6" value="6" onClick="run6()">6</button></td>
-                  <td><button type="button" name="multiply" value="*" onClick="runmultiply()">*</button></td>
-                  <td><button type="button" name="plusminus" value="neg" onClick="runneg()">&plusmn;</button></td>
-               </tr>
-               <tr>
-                  <td><button type="button" name="1" value="1" onClick="run1()">1</button></td>
-                  <td><button type="button" name="2" value="2" onClick="run2()">2</button></td>
-                  <td><button type="button" name="3" value="3" onClick="run3()">3</button></td>
-                  <td><button type="button" name="minus" value="-" onClick="runminus()">-</button></td>
-                  <td rowspan="2"> <button type="button" id="f" name="calc" value="=" onClick="calculate()">=</button><br /></td>
-               </tr>
-               <tr>
-                  <td colspan="2"><button type="button" name="0" value="0" onClick="run0()">0</button></td>
-                  <td><button type="button" name="button" value="decimal" onClick="rundecimal()">.</button></td>
-                  <td><button type="button" name="plus" value="+" onClick="runplus()">+</button></td>
-               </tr>
-            </table>
-         </form>
+         <form class="content" name="calculator">
+			<table class="calculator">
+				<tr>
+					<td colspan="5"><input id="result" type="text" value="0" name="result"/>
+				</tr>
+				<tr>
+					<td><input type="button" name="numberButton" value="7" />
+					<td><input type="button" name="numberButton" value="8" />
+					<td><input type="button" name="numberButton" value="9" />
+					<td><input type="button" name="functionalButton" id="4" value="/" />
+					<td><input type="button" name="reset" id="reset" value="C" />
+				</tr>
+				<tr>
+					<td><input type="button" name="numberButton" value="4" />
+					<td><input type="button" name="numberButton" value="5" />
+					<td><input type="button" name="numberButton" value="6" />
+					<td><input type="button" name="functionalButton" id="3" value="*" />
+					<td><input type="button" name="inversion" id="inversion" value="&plusmn;" />
+				</tr>
+				<tr>
+					<td><input type="button" name="numberButton" value="1" />
+					<td><input type="button" name="numberButton" value="2" />
+					<td><input type="button" name="numberButton" value="3" />
+					<td><input type="button" name="functionalButton" id="2" value="-" />
+					<td rowspan="2"><input id="equal" type="button" name="equal" value="=" />
+				</tr>
+				<tr>
+					<td colspan="2"><input id="zero" type="button" name="numberButton" value="0" />
+					<td><input type="button" name="point" id="point" value="." />
+					<td><input type="button" name="functionalButton" id="1" value="+" />
+				</tr>
+			</table>
+		</form>
          <br />
          <br />
       </div>

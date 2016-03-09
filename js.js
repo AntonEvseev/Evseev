@@ -1,107 +1,78 @@
-function run1() {
-document.frm.result.value +="1";
+
+var p = 0; 
+var memory = 0;
+var f = 0; 
+var calcTablo = document.getElementById("result");
+function clicButton(num){ 
+	if (p == 0) {
+	if(calcTablo.value == "0"){
+		calcTablo.value = num;
+			}else{
+				calcTablo.value = calcTablo.value + num;
+	}
+	}else {
+			calcTablo.value = "";
+			calcTablo.value = num;
+			p = 0;
+		}
+	}
+function operations(fNum){ 
+		if (f > 0){
+			output();
+		}
+		f = fNum;
+		p = 1;
+		memory = parseFloat(calcTablo.value);
+	}
+function output() {	
+	p = 1;
+		if (f == 1){
+			calcTablo.value = memory + parseFloat(calcTablo.value);
+		}else if (f == 2) {
+			calcTablo.value = memory - parseFloat(calcTablo.value);
+		}else if (f == 3) {
+			calcTablo.value = memory * parseFloat(calcTablo.value);
+		}else if (f == 4){ 
+			if (parseFloat(calcTablo.value) == 0){
+				calcTablo.value="Ошибка!На ноль делить нельзя!";
+			}else {
+				calcTablo.value = memory / parseFloat(calcTablo.value);
+			}
+		}
+	f = 0;
 }
-function run2() {
-document.frm.result.value +="2";
+function decimal(){ 
+	 if(p!== 0){   
+         calcTablo.value = "0.";
+			p = 0;
+   }else {
+			if (calcTablo.value.indexOf(".")==-1){
+				calcTablo.value = calcTablo.value + ".";
+			}
+		}
+   }        
+function res(){ 
+		calcTablo.value = "0";
+		p = 0;  
+		memory = 0;
+		f = 0;
 }
-function run3() {
-document.frm.result.value +="3";
+function invers() {
+		calcTablo.value = parseFloat(calcTablo.value) * -1;
+	}
+document.getElementById("point").onclick = decimal;
+document.getElementById("equal").onclick = output;
+document.getElementById("inversion").onclick = invers;
+document.getElementById("reset").onclick = res;
+var number = document.getElementsByName("numberButton");
+for (var i=0; i < number.length; i++){
+	number[i].onclick = function(){
+		clicButton(this.value);
+	}
 }
-function run4() {
-document.frm.result.value +="4";
+var numberFunc = document.getElementsByName("functionalButton");
+for (var i=0; i < numberFunc.length; i++){
+	numberFunc[i].onclick = function(){
+		operations(Number(this.id)); 
+	}
 }
-function run5() {
-document.frm.result.value +="5";
-}
-function run6() {
-document.frm.result.value +="6";
-}
-function run7() {
-document.frm.result.value +="7";
-}
-function run8() {
-document.frm.result.value +="8";
-}
-function run9() {
-document.frm.result.value +="9";
-}
-function run0() {
-document.frm.result.value +="0";
-}
-function runplus() {
-document.frm.result.value +="+";
-}
-function rundevision() {
-document.frm.result.value +="/";
-}
-function runmultiply() {
-document.frm.result.value +="*";
-}
-function runminus() {
-document.frm.result.value +="-";
-}
-function rundecimal() {
-document.frm.result.value +=".";
-}
-function rundel() {
-document.frm.result.value ="";
-}
-function runneg() {   
- document.frm.result.value ="-";
-}
-function calculate() {
-   var eval1 = eval(document.frm.result.value);
-   if(Math.abs(eval1) == Infinity) alert('Деление на ноль!');
-   else document.frm.result.value = eval1;
-}
-function showResults()
-        {
-            
-            var i = 0;
-            if(document.getElementById('choice11').checked == true)
-            {
-                i++;
-            }
-            if(document.getElementById('choice23').checked == true)
-            {
-                i++;
-            }
-            if(document.getElementById('choice34').checked == true)
-            {
-                i++;
-            }
-            if(document.getElementById('choice41').checked == true)
-            {
-                i=i-0.5;
-            }
-            if(document.getElementById('choice43').checked == true)
-            {
-               i=i-0.5;
-            }
-            if(document.getElementById('choice42').checked == true)
-            {
-                i=i+0.5;
-            }
-            if(document.getElementById('choice44').checked == true)
-            {
-            i=i+0.5;
-            }
-            if(document.getElementById('choice51').checked == true)
-            {
-                i=i+0.5;
-            } 
-             if(document.getElementById('choice52').checked ==true)
-             {
-             i=i+0.5;
-             }
-             if(document.getElementById('choice53').checked == true)
-            {
-                i=i-0.5;
-            } 
-             if(document.getElementById('choice54').checked ==true)
-             {
-             i=i-0.5;
-             }
-                           
-            alert("Вами набрано " + i + " баллов" + " из 5 возможных!");
-         } 
